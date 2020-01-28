@@ -13,9 +13,6 @@
 import Microcart from '@vue-storefront/core/compatibility/components/blocks/Microcart/Microcart'
 
 export default {
-  components: {
-    Microcart
-  },
   mixins: [
     Microcart
   ],

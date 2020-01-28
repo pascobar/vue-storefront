@@ -26,7 +26,7 @@ export default {
       }
     }
   },
-  async created () {
+  mounted () {
     window.storyblok.init({
       accessToken: token
     })
