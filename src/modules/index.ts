@@ -30,7 +30,7 @@ const extendCartVuex = {
     priceRule: 100
   },
   getters: {
-    getPriceRule(state) {
+    getPriceRule (state) {
       return state.priceRule
     }
   }

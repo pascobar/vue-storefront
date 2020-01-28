@@ -42,16 +42,16 @@ export default {
     })
   },
   methods: {
-    getStory(slug, version) {
+    getStory (slug, version) {
       storyapi.get('cdn/stories/' + slug, {
         version: version
       })
-      .then((response) => {
-        this.story = response.data.story
-      })
-      .catch((error) => {
-        console.log(error);
-      })
+        .then((response) => {
+          this.story = response.data.story
+        })
+        .catch((error) => {
+          console.log(error);
+        })
     }
   }
 }

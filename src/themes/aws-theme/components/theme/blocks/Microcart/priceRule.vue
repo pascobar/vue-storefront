@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Microcart from '@vue-storefront/core/compatibility/components/blocks/Microcart/Microcart'  
+import Microcart from '@vue-storefront/core/compatibility/components/blocks/Microcart/Microcart'
 
 export default {
   components: {
@@ -24,8 +24,8 @@ export default {
       return this.$store.getters['cart/getPriceRule']
     },
     subtotal () {
-      let totalsArray = this.totals,
-        i
+      let totalsArray = this.totals;
+      let i
 
       for (i = 0; i < totalsArray.length; i++) {
         if (totalsArray[i].code === 'grand_total') {

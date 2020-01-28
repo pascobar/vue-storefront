@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <head-image />
-    
+
     <section class="story-blok-wrapper container px15">
       <div class="row">
         <div class="col-lg-12">

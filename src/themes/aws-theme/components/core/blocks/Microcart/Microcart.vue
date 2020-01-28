@@ -19,18 +19,9 @@
       </div>
     </div>
 
-
-
-
-
     <div class="row middle-xs bg-cl-primary top-sm px40 actions" v-if="productsInCart.length">
-        <PriceRule />
+      <PriceRule />
     </div>
-
-
-
-
-
 
     <div class="row middle-xs bg-cl-primary top-sm px40 actions">
       <div class="col-xs-12 col-sm">
