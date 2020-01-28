@@ -1,5 +1,5 @@
 // import { extendModule } from '@vue-storefront/core/lib/module'
-import { VueStorefrontModule } from '@vue-storefront/core/lib/module'
+import { VueStorefrontModule, extendModule } from '@vue-storefront/core/lib/module'
 import { Catalog } from '@vue-storefront/core/modules/catalog'
 import { Cart } from '@vue-storefront/core/modules/cart'
 import { Checkout } from '@vue-storefront/core/modules/checkout'
@@ -25,26 +25,23 @@ import { RawOutputExample } from './raw-output-example'
 import { InstantCheckout } from './instant-checkout'
 import { OrderHistory } from './order-history'
 
-// import { Example } from './module-template'
+const extendCartVuex = {
+  state: {
+    priceRule: 100
+  },
+  getters: {
+    getPriceRule(state) {
+      return state.priceRule
+    }
+  }
+}
 
-// This is how you can extend any of VS modues
-// const extendCartVuex = {
-//   actions: {
-//     load () {
-//       Logger.info('New load function')()
-//     }
-//   }
-//  }
+const cartExtend = {
+  key: 'cart',
+  store: {modules: [{key: 'cart', module: extendCartVuex}]}
+}
 
-//  const cartExtend = {
-//   key: 'cart',
-//   afterRegistration: function(isServer, config) {
-//     Logger.info('New afterRegistration hook')()
-//   },
-//   store: { modules: [{ key: 'cart', module: extendCartVuex }] },
-//  }
-
-//  extendModule(cartExtend)
+extendModule(cartExtend)
 
 /**
  * Some of the modules are registered lazily only when components from the module are appearing on current page.
